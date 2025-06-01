@@ -1,7 +1,6 @@
 # GitHub Codespaces & Devcontainers
 .devcontainer/credentials/
 .devcontainer/secrets/
-.devcontainer/*.sh
 .devcontainer/*.env
 *.code-workspace
 
