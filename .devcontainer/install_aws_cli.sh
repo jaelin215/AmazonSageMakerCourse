@@ -9,14 +9,15 @@ set -e
 
 echo "Installing AWS CLI v2..."
 
+# Clean up any previous installs
+sudo rm -rf ./aws
+rm -f awscliv2.zip
+
 # Download
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip -o awscliv2.zip                    # <- '-o' forces overwrite
+sudo ./aws/install -u                    # <- '-u' = unattended install
 
-# Unzip
-unzip -q awscliv2.zip
-
-# Install
-sudo ./aws/install
 
 # Verify
 echo "AWS CLI version:"
