@@ -1,3 +1,22 @@
+# GitHub Codespaces & Devcontainers
+.devcontainer/credentials/
+.devcontainer/secrets/
+.devcontainer/*.sh
+.devcontainer/*.env
+*.code-workspace
+
+# AWS CLI profiles or config backups
+.aws/
+*.aws_credentials
+*.aws_config
+
+# Environment config
+*.env
+.envrc
+.env.*
+secrets.toml
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
