@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🔐 Setting up 'ml_user_predict' AWS CLI profile..."
+echo "🔐 Setting up 'ml_user' AWS CLI profile..."
 
 # Check required variables
 if [[ -z "$AWS_ACCESS_KEY_ID" || -z "$AWS_SECRET_ACCESS_KEY" ]]; then
@@ -16,16 +16,16 @@ mkdir -p ~/.aws
 
 # Credentials file
 cat <<EOF > ~/.aws/credentials
-[ml_user_predict]
+[ml_user]
 aws_access_key_id = ${AWS_ACCESS_KEY_ID}
 aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}
 EOF
 
 # Config file
 cat <<EOF > ~/.aws/config
-[profile ml_user_predict]
+[profile ml_user]
 region = ${REGION}
 output = json
 EOF
 
-echo "✅ Profile 'ml_user_predict' created with region '${REGION}'."
+echo "✅ Profile 'ml_user' created with region '${REGION}'."
