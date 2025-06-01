@@ -1,0 +1,5 @@
+{
+  "name": "ml-codespace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "postStartCommand": "bash .devcontainer/install-aws-cli.sh && bash .devcontainer/install-requirements.sh && bash .devcontainer/setup-aws-env.sh"
+}
