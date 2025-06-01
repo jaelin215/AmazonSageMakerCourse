@@ -15,7 +15,7 @@ EOF
 # Config file
 cat <<EOF > ~/.aws/config
 [profile ml_user_predict]
-region = ${AWS_DEFAULT_REGION:-us-east-1}
+region = ${AWS_DEFAULT_REGION:us-east-1}
 output = json
 EOF
 
