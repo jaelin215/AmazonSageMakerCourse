@@ -1,2 +1,4 @@
 boto3
 sagemaker
+matplotlib
+scikit-learn
